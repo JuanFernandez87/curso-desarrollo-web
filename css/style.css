@@ -1,0 +1,300 @@
+/* fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+/* 
+Paleta de colores
+Rosa claro pastel #F5D2D2
+Arena pastel #F8F7BA
+Verde claro pastel #BDE3C3
+Celeste claro pastel #A3CCDA
+*/
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+    grid-template-rows: auto 1fr auto; /* Alturas de las filas */
+    min-height: 100vh;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.section-wrapper {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HEADER */
+.encabezado {
+    grid-area: header;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F8F7BA;
+    border-bottom: 2px solid #000000;
+}
+
+.encabezado nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.encabezado nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* estilo logo navbar */
+.logo {
+    width: 80px;
+    height: 80px;
+}
+
+/* MAIN */
+.contenido {
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.hero-section {
+    height: 500px;
+    background-image: url("../img/hero.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 15px;
+}
+
+.hero-section h2 {
+    font-size: 60px;
+    color: #F8F7BA;
+}
+
+.hero-section p {
+    font-size: 25px;
+    margin-top: 20px;
+    color: #F8F7BA;
+}
+
+.video {
+    padding: 20px;
+    width: 600px;
+    height: 350px;
+}
+
+.carousel-section {
+    width: 100%;
+    padding: 20px;
+}
+
+.carousel-section  p {
+        font-size: 18px;
+    }
+
+.origin-section {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.origin-section div {
+    max-width: 800px;
+}
+ 
+.origin-section div p {
+    font-size: 18px;
+}
+
+/* FOOTER */
+.pie {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    border-top: 2px solid #000000;
+    background-color: #F8F7BA;
+}
+
+.pie ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pie ul li {
+    margin: 5px;
+}
+
+.pie ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.pie div{
+    align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+
+/* about-as */
+.about-us-section {
+    width: 70%;
+    height: 100%;
+}
+
+.about-us-section div {
+    max-width: 800px;
+}
+
+.about-us-section div p {
+    font-size: 18px;
+}
+
+/* faqs */
+.faqs-section {
+    width: 70%;
+    height: 100%;
+}
+
+.faqs-section div p {
+    font-size: 18px;
+}
+
+/* register */
+.register-form {
+    width: 70%;
+    height: 100%;
+}
+
+.register-form div {
+    width: 70%;
+}
+
+.custom-btn {
+    background-color: #F8F7BA;
+    color: black;
+    border: 2px solid black;
+}
+
+.custom-btn:hover {
+    background-color: #BDE3C3;
+    color: black;
+}
+
+/* users */
+.users-list {
+    width: 60%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.users-list div {
+    width: 100%;
+}
+
+.users-list div p {
+    font-size: 18px;
+}
+
+/* Responsivo */
+@media (max-width: 570px) {
+    .encabezado nav ul {
+        flex-direction: column;
+    }
+
+    .hero-section {
+        height: 600px;
+    }
+
+    .hero-section h2 {
+        font-size: 28px;
+    }
+
+    .hero-section p {
+        font-size: 20px;
+    }
+
+    .video {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .video iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;   
+    }
+
+    .pie {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .origin-section div p{
+        font-size: 16px;
+    }
+
+    .about-us-section {
+        width: 100%;
+        div p {
+            font-size: 16px;
+        }
+    }
+
+    .faqs-section {
+        width: 100%;
+    }
+
+    .register-form {
+        width: 100%;
+    }
+
+    .register-form div {
+        width: 100%;
+    }
+
+    .users-list {
+        width: 100%;
+        padding: 3px;
+    }
+}
