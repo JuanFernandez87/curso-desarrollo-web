@@ -1,0 +1,27 @@
+@use "../base/funcionalidades" as v;
+@use "sass:list";
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.register-form {
+    width: 70%;
+    height: 100%;
+
+    div {
+        width: 70%;
+    }
+
+    .custom-btn {
+        @extend %boton;
+        border: 2px solid black;
+    }
+
+    .custom-btn:hover {
+        background-color: list.nth(v.$colores, 2);
+        color: black;
+    }
+}

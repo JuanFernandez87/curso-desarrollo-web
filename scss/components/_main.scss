@@ -1,0 +1,76 @@
+@use "../base/funcionalidades" as v;
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.contenido {
+    grid-area: main;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 1;
+    @include v.flex (flex, center, center);
+
+    .section-wrapper {
+        padding: 20px;
+        @include v.flex (flex, center, center);
+    }
+}
+
+.hero-section {
+    height: 500px;
+    background-image: url("../img/hero.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 15px;
+
+    h2 {
+        font-size: 60px;
+        color: v.$color-principal;
+    }
+
+    p{
+        font-size: 25px;
+        margin-top: 20px;
+        color: v.$color-principal;
+    }
+}
+
+.video {
+    padding: 20px;
+    width: 600px;
+    height: 350px;
+}
+
+.origin-section {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    div {
+        max-width: 800px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+.carousel-section {
+    width: 100%;
+    padding: 20px;
+
+    p {
+        font-size: 18px;
+    }
+}

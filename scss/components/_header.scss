@@ -1,0 +1,26 @@
+@use "../base/funcionalidades" as v;
+
+.encabezado {
+    grid-area: header;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: v.$color-principal;
+    border-bottom: 2px solid #000000;
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    li a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+}

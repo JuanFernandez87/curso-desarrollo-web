@@ -1,0 +1,36 @@
+@use "../base/funcionalidades" as v;
+
+.pie {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    border-top: 2px solid #000000;
+    background-color: v.$color-principal;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin: 5px;
+
+            a {
+               text-decoration: none;
+               color: black;
+            }
+        }
+    }
+
+    div{
+        align-items: center;
+    }
+
+    .social-icons {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 15px;
+    }
+}

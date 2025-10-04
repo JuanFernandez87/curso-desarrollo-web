@@ -1,0 +1,19 @@
+// variables
+$color-principal: #F8F7BA;
+$color-secundario: #BDE3C3;
+
+// listas
+$colores: #F8F7BA, #BDE3C3;
+
+// extends
+%boton {
+    color: black;    
+    background-color: $color-principal;
+}
+
+// mixin
+@mixin flex ($flex, $justify, $align) {
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align;
+}
